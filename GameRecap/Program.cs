@@ -7,7 +7,7 @@ namespace GameRecap
         static void Main(string[] args)
         {
             Gamer gamer1 = new Gamer() { Id = 1, FirstName = "GUVEN", 
-                LastName = "BOYDAK", DateOfBirth = new DateTime(1993, 3, 3), 
+                LastName = "BOYDAK", DateOfBirth = new DateTime(1993,3,3), 
                 IdentityNumber = 12344567894 };
 
             Gamer gamer2 = new Gamer()
@@ -15,20 +15,20 @@ namespace GameRecap
                 Id = 2,
                 FirstName = "AYLIN",
                 LastName = "BOYDAK",
-                DateOfBirth = new DateTime(1992, 6, 8),
+                DateOfBirth = new DateTime(1992,6,8),
                 IdentityNumber = 12344567896
             };
 
             GamerManager gamerManager = new GamerManager(new UserValidationManager());
             gamerManager.Add(gamer1);
-            Console.WriteLine(gamer1.FirstName + " " + gamer1.LastName + " " + gamer1.IdentityNumber);
+            Console.WriteLine(gamer1.FirstName + " " + gamer1.LastName + " " + gamer1.DateOfBirth + " " + gamer1.IdentityNumber);
             Console.WriteLine();
 
             gamerManager.Delete(gamer1);
             Console.WriteLine();
 
             gamerManager.Update(gamer2);
-            Console.WriteLine(gamer2.FirstName + " " + gamer2.LastName + " " + gamer2.IdentityNumber);
+            Console.WriteLine(gamer2.FirstName + " " + gamer2.LastName + " " + gamer2.DateOfBirth + " " + gamer2.IdentityNumber);
             Console.WriteLine();
 
 
@@ -50,6 +50,19 @@ namespace GameRecap
 
             Campaing campaing1 = new Campaing() { CampaingName = "New Year", CampaingDiscount = 15 };
             Campaing campaing2 = new Campaing() { CampaingName = "Black Friday", CampaingDiscount = 35 };
+
+            CampaingManager campaingManager = new CampaingManager();
+            campaingManager.Add(campaing1);
+            Console.WriteLine(campaing1);
+            Console.WriteLine();
+
+            campaingManager.Delete(campaing1);
+            Console.WriteLine();
+
+            campaingManager.Update(campaing2);
+            Console.WriteLine(campaing2);
+            Console.WriteLine();
+
 
             Sales sales1 = new Sales() { SalesId = 1, salerName = "Ali", Price = 25 };
             Sales sales2 = new Sales() { SalesId = 2, salerName = "Fatih", Price = 15 };

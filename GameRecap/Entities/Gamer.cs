@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameRecap.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GameRecap
 {
-    class Gamer
+    class Gamer: IEntity
     {
         public int Id { get; set; }
         public string FirstName { get; set; }

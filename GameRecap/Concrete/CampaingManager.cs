@@ -10,18 +10,18 @@ namespace GameRecap
     {
         public void Add(Campaing campaing)
         {
-            Console.WriteLine(campaing.CampaingName + "  " + campaing.CampaingDiscount + "Eklendi");
+            Console.WriteLine(campaing.CampaingName + "  " + campaing.CampaingDiscount + " Eklendi");
         }
 
         public void Delete(Campaing campaing)
         {
-            Console.WriteLine(campaing.CampaingName + "  " + campaing.CampaingDiscount + "Silindi");
+            Console.WriteLine(campaing.CampaingName + "  " + campaing.CampaingDiscount + " Silindi");
 
         }
 
         public void Update(Campaing campaing)
         {
-            Console.WriteLine(campaing.CampaingName + "  " + campaing.CampaingDiscount + "Güncellendi");
+            Console.WriteLine(campaing.CampaingName + "  " + campaing.CampaingDiscount + " Güncellendi");
 
         }
     }
